@@ -1,5 +1,4 @@
-let myFriends = [
-    {
+let myFriends = [{
         firstName: "Tim",
         lastName: "Smith",
         age: "34"
@@ -22,31 +21,45 @@ let myFriends = [
     {
         firstName: "Stacey",
         lastName: "Franklin",
-        age: "52"       
+        age: "52"
     },
     {
         firstName: "Dan",
         lastName: "Offernan",
-        age: "42"         
-    }  
-  ]
+        age: "42"
+    }
+]
 
 // These steps should be executed without directly modifying the array above
 
 // 1.) Add a friend to the myFriends array
 // Your code here
 
+myFriends.push({
+    firstName: "Scottathan",
+    lastName: "Hagaropotomus",
+    age: "25",
+})
+
 // 2.) remove a friend from the array (not the one you just added)
 // Your code here
+
+myFriends.splice(0, 1)
 
 // 3.) console.log the array in reverse
 // Your code here
 
+myFriends.reverse()
+
 // 4.) Change the first object's "firstName" value to Timothy
 // your code here
 
+myFriends[0].firstName = "\"Timothy\" aka Scottathan"
+
 // 5.) Give the last friend in the array a new property, "nickName" with the value of "Danny". 
 // your code here
+
+myFriends[5].nickName = "Danny boy"
 
 // DO NOT edit past this line
 //___________________________
@@ -62,5 +75,4 @@ myFriends.forEach((friends) => {
     `
 
     document.querySelector('#friendsDiv').innerHTML += friend;
-}) 
-
+})
